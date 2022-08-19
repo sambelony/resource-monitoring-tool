@@ -18,7 +18,7 @@ Get instructions from the terminal (must be in the folder with the `.py` file):
 
 1. Argument `--process` - the name of the process with the extension, or the full path to the file.
 2. Argument `--interval` - statistics collection interval, in seconds.
-3. Argument `--graph` - is responsible for creating graphs, whether it is necessary to save (Y or N) graphs built according to the data from the received `resources.csv` file.
+3. Argument `--graph` - is responsible for creating graphs, whether it is necessary to save (Y or N) graphs built according to the data from the created `.csv` file.
 
 **Program launch example:**
 `python rmonitoring.py --process notepad.exe --interval 1 --graph y` - to run the notepad.exe process, data collection interval is 1 second, graphs will be built and saved in `.png` format to the directory with the `rmonitoring file .py`.
@@ -47,7 +47,7 @@ To install required libraries: `pip install -r requirements.txt`
 
 1. Аргумент `--process` - название процесса с расширением, либо полный путь до файла.
 2. Аргумент `--interval` - интервал сбора статистики, указывается в секундах.
-3. Аргумент `--graph` - отвечает за создание графиков, необходимо ли сохранять (Y or N) построенные по данным из полученного `resources.csv` файла графики.
+3. Аргумент `--graph` - отвечает за создание графиков, необходимо ли сохранять (Y or N) построенные по данным из созданного `.csv` файла графики.
 
 **Пример запуска программы:**
 `python rmonitoring.py --process notepad.exe --interval 1 --graph y` - для запуска процесса notepad.exe, интервал сбора 1 секунда, графики будут построены и сохранены в формате `.png` в дерикторию с файлом `rmonitoring.py`.
