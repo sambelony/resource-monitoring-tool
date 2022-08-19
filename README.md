@@ -23,6 +23,10 @@ Get instructions from the terminal (must be in the folder with the `.py` file):
 **Program launch example:**
 `python rmonitoring.py --process notepad.exe --interval 1 --graph y` - to run the notepad.exe process, data collection interval is 1 second, graphs will be built and saved in `.png` format to the directory with the `rmonitoring file .py`.
 
+**Important:**
+The program will require additional libraries that are specified in `requirements.txt`.
+To install required libraries: `pip install -r requirements.txt`
+
 # RUS:
 
 **Задача:**
@@ -47,4 +51,8 @@ Get instructions from the terminal (must be in the folder with the `.py` file):
 
 **Пример запуска программы:**
 `python rmonitoring.py --process notepad.exe --interval 1 --graph y` - для запуска процесса notepad.exe, интервал сбора 1 секунда, графики будут построены и сохранены в формате `.png` в дерикторию с файлом `rmonitoring.py`.
+
+**Важно:**
+Для работы программы потребуются дополнительные библиотеки, которые указаны `requirements.txt`.
+Чтобы установить необходимые библиотеки: `pip install -r requirements.txt`
 
