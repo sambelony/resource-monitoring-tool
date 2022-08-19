@@ -1,0 +1,14 @@
+# Ignote file named 'README.md'
+README.md
+
+# Ignore .png files
+*.png
+
+# Ignore .csv files
+*.csv
+
+# Ignore .pyc files
+*.pyc
+
+# PyCharm
+.idea/
