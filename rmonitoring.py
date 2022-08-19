@@ -7,6 +7,7 @@ import subprocess
 import platform
 from datetime import datetime
 from matplotlib import pyplot as plt
+import os
 
 
 class Monitoring:
@@ -20,7 +21,7 @@ class Monitoring:
     def run_monitoring(self, interval_time):
         """Monitoring process params while it's running and writing collected data to .csv file."""
         try:
-            with open('resources.csv', 'w') as file:
+            with open(f'{os.path.basename(process).split(".")[0]}.csv', 'w') as file:
                 if platform.system() == 'Windows':
                     file.write(f'Date; CPU; Working Set; Private Bytes; Number of handles\n')
                     while True:
@@ -73,7 +74,7 @@ class Monitoring:
             plt.xticks(ticks=range(len(y)), labels=x, rotation=90)
             plt.subplots_adjust(bottom=0.4)
             plt.plot(x, y, label=data)
-            plt.savefig(f'{data}.png', dpi=300)
+            plt.savefig(f'{os.path.basename(process).split(".")[0]} {data}.png', dpi=300)
             plt.close()
 
 if __name__ == '__main__':
@@ -105,4 +106,4 @@ if __name__ == '__main__':
     monitoring.run_monitoring(interval)
 
     if graph == 'y':
-        monitoring.make_graph('resources.csv')
+        monitoring.make_graph(f'{os.path.basename(process).split(".")[0]}.csv')
