@@ -76,7 +76,7 @@ class Monitoring:
     def make_graph(filename):
         if platform.system() == 'Windows':
             headers = ['Date', 'CPU', 'Working Set', 'Private Bytes', 'Number of handles']
-        else:
+        elif platform.system() == 'Linux':
             headers = ['Date', 'CPU', 'Resident Set Size', 'Virtual Memory Size', 'File Descriptors']
         df = pd.read_csv(filename, skiprows=1, names=headers, sep=';')
         for data in headers[1:]:
